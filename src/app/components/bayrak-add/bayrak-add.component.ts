@@ -38,14 +38,25 @@ export class BayrakAddComponent implements OnInit {
 
 
 
-  add() {
+  add(){
     if(this.bayrakAddForm.valid){
       let bayrakModel = Object.assign({},this.bayrakAddForm.value)
       this.bayrakService.add(bayrakModel).subscribe(response=>{
-      this.toastrService.success(response.message,"Başarılı")
-    } )
+        this.toastrService.success(response.message,"Başarılı")
+        console.log(response)
+      },responseError=>{
+        console.log(responseError)
+        if(responseError.error.Errors.length>0){
+          for (let i = 0; i <responseError.error.Errors.length; i++) {
+            this.toastrService.error(responseError.error.Errors[i].ErrorMessage
+              ,"Doğrulama hatası")
+          }       
+        } 
+      })
+      
     }else{
-      this.toastrService.error("Form eksik","Dikkat")
+      this.toastrService.error("Formunuz eksik","Dikkat")
     }
-}
+    
+  }
 }
