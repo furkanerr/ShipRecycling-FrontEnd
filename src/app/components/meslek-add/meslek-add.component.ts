@@ -33,16 +33,27 @@ export class MeslekAddComponent implements OnInit {
     });
   }
 
-  add() {
+  add(){
     if(this.meslekAddForm.valid){
       let meslekModel = Object.assign({},this.meslekAddForm.value)
-    this.meslekService.add(meslekModel).subscribe(response=>{
-      this.toastrService.success(response.message,"Başarılı")
-    } )
+      this.meslekService.add(meslekModel).subscribe(response=>{
+        this.toastrService.success(response.message,"Başarılı")
+        console.log(response)
+      },responseError=>{
+        console.log(responseError)
+        if(responseError.error.Errors.length>0){
+          for (let i = 0; i <responseError.error.Errors.length; i++) {
+            this.toastrService.error(responseError.error.Errors[i].ErrorMessage
+              ,"Doğrulama hatası")
+          }       
+        } 
+      })
+      
     }else{
-      this.toastrService.error("Form eksik","Dikkat")
+      this.toastrService.error("Formunuz eksik","Dikkat")
     }
-}
+    
+  }
 
 
 

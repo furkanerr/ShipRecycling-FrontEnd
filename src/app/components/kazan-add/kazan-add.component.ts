@@ -34,14 +34,25 @@ export class KazanAddComponent implements OnInit {
     });
   }
 
-  add() {
-    if (this.kazanAddForm.valid) {
-      let kazanModel = Object.assign({}, this.kazanAddForm.value);
-      this.kazanService.add(kazanModel).subscribe((response) => {
-        this.toastrService.success(response.message, 'Başarılı');
-      });
-    } else {
-      this.toastrService.error('Form eksik', 'Dikkat');
+  add(){
+    if(this.kazanAddForm.valid){
+      let kazanModel = Object.assign({},this.kazanAddForm.value)
+      this.kazanService.add(kazanModel).subscribe(response=>{
+        this.toastrService.success(response.message,"Başarılı")
+        console.log(response)
+      },responseError=>{
+        console.log(responseError)
+        if(responseError.error.Errors.length>0){
+          for (let i = 0; i <responseError.error.Errors.length; i++) {
+            this.toastrService.error(responseError.error.Errors[i].ErrorMessage
+              ,"Doğrulama hatası")
+          }       
+        } 
+      })
+      
+    }else{
+      this.toastrService.error("Formunuz eksik","Dikkat")
     }
+    
   }
 }

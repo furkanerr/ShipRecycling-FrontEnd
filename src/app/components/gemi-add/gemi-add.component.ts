@@ -46,16 +46,27 @@ export class GemiAddComponent implements OnInit {
     });
   }
 
-  add() {
+  add(){
     if(this.gemiAddForm.valid){
       let gemiModel = Object.assign({},this.gemiAddForm.value)
-    this.gemiService.add(gemiModel).subscribe(response=>{
-      this.toastrService.success(response.message,"Başarılı")
-    } )
+      this.gemiService.add(gemiModel).subscribe(response=>{
+        this.toastrService.success(response.message,"Başarılı")
+        console.log(response)
+      },responseError=>{
+        console.log(responseError)
+        if(responseError.error.Errors.length>0){
+          for (let i = 0; i <responseError.error.Errors.length; i++) {
+            this.toastrService.error(responseError.error.Errors[i].ErrorMessage
+              ,"Doğrulama hatası")
+          }       
+        } 
+      })
+      
     }else{
-      this.toastrService.error("Form eksik","Dikkat")
+      this.toastrService.error("Formunuz eksik","Dikkat")
     }
-}
+    
+  }
 
 getBayraklar() {
   this.bayrakService.getBayrak().subscribe(response=>{
