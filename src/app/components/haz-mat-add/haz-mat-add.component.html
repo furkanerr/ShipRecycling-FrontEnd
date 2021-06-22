@@ -1,0 +1,86 @@
+<div class="content">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header"><h5 class="title">Hazardous Material  Kaydı Yap</h5></div>
+            <div class="card-body">
+                <form [formGroup]="hazMatAddForm">
+                    
+                   
+                    <div class="mb-3">
+                        <label for="categoryId">IHM Raporu</label>
+                        <div class="form-group">
+                            <input type="number" 
+                            id="IHMRaporID" 
+                            formControlName="IHMRaporID" class="form-control" 
+                            placeholder="IHM Raporu"/>
+                        </div>
+                    </div>
+                   <div class="mb-3">
+                    <label for="unitsInStock">Blok</label>
+                    <div class="form-group">
+                        <input type="number" 
+                        id="blokID" 
+                        formControlName="blokID" class="form-control" 
+                        placeholder="Blok"/>
+                    </div>
+                   </div>
+                    <div  class="mb-3">
+                        <label for="unitPrice">Ölçü Birimi</label>
+                        <div class="form-group">
+                            <input type="text" 
+                            id="olcuBirimiID" 
+                            formControlName="olcuBirimiID" class="form-control" 
+                            placeholder="Ölçü Birimi"/>
+                        </div>
+                    </div>
+                    <div  class="mb-3">
+                        <label for="unitPrice">Gemi</label>
+                        <div class="form-group">
+                            <input type="text" 
+                            id="gemiID" 
+                            formControlName="gemiID" class="form-control" 
+                            placeholder="Gemi"/>
+                        </div>
+                    </div>
+
+                    <div  class="mb-3">
+                        <label for="unitPrice">Miktar</label>
+                        <div class="form-group">
+                            <input type="number" 
+                            id="miktar" 
+                            formControlName="miktar" class="form-control" 
+                            placeholder="Miktar"/>
+                        </div>
+                    </div>
+
+                    <div  class="mb-3">
+                        <label for="unitPrice">Markalama Tarihi</label>
+                        <div class="form-group">
+                            <input type="date" 
+                            id="markalamaTarihi" 
+                            formControlName="markalamaTarihi" class="form-control" 
+                            placeholder="Markalama Tarihi"/>
+                        </div>
+                    </div>
+
+                    <div  class="mb-3">
+                        <label for="unitPrice">Hazardous Material Tipi</label>
+                        <div class="form-group">
+                            <input type="text" 
+                            id="hazMatTipID" 
+                            formControlName="hazMatTipID" class="form-control" 
+                            placeholder="Hazardous Material Tipi"/>
+                        </div>
+                    </div>
+                    
+                </form>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-fill btn-primary" (click)="add()" >Ekle</button>
+            </div>
+        </div>
+        
+    </div>
+    
+</div>
+

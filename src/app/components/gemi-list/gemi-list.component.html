@@ -1,0 +1,25 @@
+<table class="table">
+    <thead>
+      <tr>
+       
+        <th scope="col">ID</th>
+        <th scope="col">Gemi Tipi</th>
+        <th scope="col">Bayrak</th>
+        <th scope="col">Tonaj</th>
+        <th scope="col">IMO No</th>
+        <th scope="col">Gemi Sahibi Şirket</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let gemi of gemiler">
+       
+        <td>{{gemi.id}}</td>
+        <td>{{gemi.gemiTipiName}}</td>
+        <td>{{gemi.bayrakName}}</td>
+        <td>{{gemi.tonnage}}</td>
+        <td>{{gemi.imoNo}}</td>
+        <td>{{gemi.gemiSahibiSirket}}</td>
+        
+      </tr>
+    </tbody>
+  </table>

@@ -1,0 +1,60 @@
+<div class="content">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header"><h5 class="title">Gemi Kaydı Yap</h5></div>
+            <div class="card-body">
+                <form [formGroup]="gemiAddForm">
+                    <div class="mb-3">
+                        <label for="productName">Bayrak</label>
+                        <select  class="form-control">
+                            <option *ngFor="let bayrak of bayraklar">{{bayrak.ulkeAdi}}</option>
+                          </select>
+                    </div>
+                   
+                    <div class="mb-3">
+                        <label for="categoryId">Gemi Tipi</label>
+                        <div class="form-group">
+                            <input type="text" 
+                            id="gemiTipiID" 
+                            formControlName="gemiTipiID" class="form-control" 
+                            placeholder="Gemi Tipi"/>
+                        </div>
+                    </div>
+                   <div class="mb-3">
+                    <label for="unitsInStock">Tonaj</label>
+                    <div class="form-group">
+                        <input type="number" 
+                        id="tonnage" 
+                        formControlName="tonnage" class="form-control" 
+                        placeholder="Tonaj"/>
+                    </div>
+                   </div>
+                    <div  class="mb-3">
+                        <label for="unitPrice">IMO No</label>
+                        <div class="form-group">
+                            <input type="number" 
+                            id="imoNo" 
+                            formControlName="imoNo" class="form-control" 
+                            placeholder="IMO No"/>
+                        </div>
+                    </div>
+                    <div  class="mb-3">
+                        <label for="unitPrice">Gemi Sahibi Şirket</label>
+                        <div class="form-group">
+                            <input type="text" 
+                            id="gemiSahibiSirket" 
+                            formControlName="gemiSahibiSirket" class="form-control" 
+                            placeholder="Gemi Sahibi Şirket"/>
+                        </div>
+                    </div>
+                    
+                </form>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-fill btn-primary" (click)="add()" >Ekle</button>
+            </div>
+        </div>
+        
+    </div>
+    
+</div>

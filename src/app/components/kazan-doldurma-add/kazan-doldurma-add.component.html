@@ -1,0 +1,86 @@
+
+
+
+<div class="content">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header"><h5 class="title">Kazan Doldurma Operasyonu Kaydı Yap </h5></div>
+            <div class="card-body">
+                <form [formGroup]="kazanDoldurmaOperasyonlariAddForm">
+                    
+                   
+                    <div class="mb-3">
+                        <label for="categoryId">Hazardous Material</label>
+                        <div class="form-group">
+                            <input type="text" 
+                            id="HazMatID" 
+                            formControlName="HazMatID" class="form-control" 
+                            placeholder="Hazardous Material "/>
+                        </div>
+                    </div>
+                   <div class="mb-3">
+                    <label for="unitsInStock">Kazan</label>
+                    <div class="form-group">
+                        <input type="number" 
+                        id="KazanID" 
+                        formControlName="KazanID" class="form-control" 
+                        placeholder="Kazan"/>
+                    </div>
+                   </div>
+                    <div  class="mb-3">
+                        <label for="unitPrice">Ahşapçı</label>
+                        <div class="form-group">
+                            <input type="number" 
+                            id="AhsapciID" 
+                            formControlName="AhsapciID" class="form-control" 
+                            placeholder="Ahşapçı"/>
+                        </div>
+                    </div>
+                    <div  class="mb-3">
+                        <label for="unitPrice">Materyal</label>
+                        <div class="form-group">
+                            <input type="number" 
+                            id="MateryalID" 
+                            formControlName="MateryalID" class="form-control" 
+                            placeholder="Materyal"/>
+                        </div>
+                    </div>
+                    <div  class="mb-3">
+                        <label for="unitPrice">Maden Ayrıştırmacı</label>
+                        <div class="form-group">
+                            <input type="text" 
+                            id="MadenAyristirmaciID" 
+                            formControlName="MadenAyristirmaciID" class="form-control" 
+                            placeholder="Maden Ayrıştırmacı"/>
+                        </div>
+                    </div>
+                    
+                    <div  class="mb-3">
+                        <label for="unitPrice">Maden Ayrıştırma Süresi</label>
+                        <div class="form-group">
+                            <input type="number" 
+                            id="MadenAyristirmaSuresi" 
+                            formControlName="MadenAyristirmaSuresi" class="form-control" 
+                            placeholder="Maden Ayrıştırma Süresi"/>
+                        </div>
+                    </div>
+                    <div  class="mb-3">
+                        <label for="unitPrice">İçerik Yüzdeleri</label>
+                        <div class="form-group">
+                            <input type="number" 
+                            id="IcerikYuzdeleri" 
+                            formControlName="IcerikYuzdeleri" class="form-control" 
+                            placeholder="İçerik Yüzdeleri"/>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-fill btn-primary" (click)="add()" >Ekle</button>
+            </div>
+        </div>
+        
+    </div>
+    
+</div>
+

@@ -1,0 +1,60 @@
+<form [formGroup]="kazanAddForm">
+   
+
+    <div class="mb-3">
+      <label for="categoryId">Ağırlık</label>
+      <div class="form-group">
+          <input type="number" 
+          id="Agirlik" 
+          formControlName="Agirlik" class="form-control" 
+          placeholder="Ağırlık"/>
+      </div>
+  </div>
+
+  
+  <div class="mb-3">
+    <label for="categoryId">Güvenli Çalışma Ağırlığı</label>
+    <div class="form-group">
+        <input type="number" 
+        id="SafeWorkingLoad" 
+        formControlName="SafeWorkingLoad" class="form-control" 
+        placeholder="Güvenli Çalışma Ağırlığı"/>
+    </div>
+</div>
+
+
+<div class="mb-3">
+    <label for="categoryId">Üretim Tarihi</label>
+    <div class="form-group">
+        <input type="date" 
+        id="UretimTarihi" 
+        formControlName="UretimTarihi" class="form-control" 
+        placeholder="Üretim Tarihi"/>
+    </div>
+</div>
+
+
+<div class="mb-3">
+    <label for="categoryId">Periyodik Kontrol Birim Değeri</label>
+    <div class="form-group">
+        <input type="number" 
+        id="PeriyordikKontrolBirimDegeri" 
+        formControlName="PeriyordikKontrolBirimDegeri" class="form-control" 
+        placeholder="Periyodik Kontorl Birim Değeri"/>
+    </div>
+</div>
+
+
+<div class="mb-3">
+    <label for="categoryId">Son Kontrol Tarihi</label>
+    <div class="form-group">
+        <input type="date" 
+        id="SonKontrolTarihi" 
+        formControlName="SonKontrolTarihi" class="form-control" 
+        placeholder="Son Kontrol Tarihi"/>
+    </div>
+</div>
+  </form>
+  <div class="card-footer">
+    <button class="btn btn-fill btn-primary" (click)="add()" >Ekle</button>
+</div>

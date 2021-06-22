@@ -1,0 +1,134 @@
+<div class="content">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header"><h5 class="title">Blok Kaydı Yap</h5></div>
+            <div class="card-body">
+                <form [formGroup]="blokAddForm">
+                  
+                    <div class="mb-3">
+                        <label for="categoryId">Gemiden Kesim Başlangıç Tarihi</label>
+                        <div class="form-group">
+                            <input type="date" 
+                            id="gemidenKesimBaslangicTarihi" 
+                            formControlName="gemidenKesimBaslangicTarihi" class="form-control" 
+                            placeholder="Gemiden Kesim Başlangıç Tarihi"/>
+                        </div>
+                    </div>
+                   <div class="mb-3">
+                    <label for="unitsInStock">Gemiden Kesim Bitiş Tarihi</label>
+                    <div class="form-group">
+                        <input type="date" 
+                        id="gemidenKesimBitisTarihi" 
+                        formControlName="gemidenKesimBitisTarihi" class="form-control" 
+                        placeholder="Gemiden Kesim Bitiş Tarihi"/>
+                    </div>
+                   </div>
+                    <div  class="mb-3">
+                        <label for="unitPrice">Gemiden Kesim Süresi</label>
+                        <div class="form-group">
+                            <input type="number" 
+                            id="gemidenKesimSuresi" 
+                            formControlName="gemidenKesimSuresi" class="form-control" 
+                            placeholder="Gemiden Kesim Süresi"/>
+                        </div>
+                    </div>
+                    <div  class="mb-3">
+                        <label for="unitPrice">Bloğun Sahaya Geliş Tarihi</label>
+                        <div class="form-group">
+                            <input type="date" 
+                            id="blogunSahayaGelisTarihi" 
+                            formControlName="blogunSahayaGelisTarihi" class="form-control" 
+                            placeholder="Bloğun Sahaya Geliş Tarihi"/>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="categoryId">Sahadaki Kesim Süresi</label>
+                        <div class="form-group">
+                            <input type="number" 
+                            id="sahadakiKesimSuresi" 
+                            formControlName="sahadakiKesimSuresi" class="form-control" 
+                            placeholder="Sahadaki Kesim Süresi"/>
+                        </div>
+                    </div>
+                   <div class="mb-3">
+                    <label for="unitsInStock">Sahadaki Kesim Başlangıç Tarihi</label>
+                    <div class="form-group">
+                        <input type="date" 
+                        id="sahadakiKesimBaslangicTarihi" 
+                        formControlName="sahadakiKesimBaslangicTarihi" class="form-control" 
+                        placeholder="Sahadaki Kesim Başlangıç Tarihi"/>
+                    </div>
+                   </div>
+                    <div  class="mb-3">
+                        <label for="unitPrice">Sahadaki Kesim Bitiş Tarihi</label>
+                        <div class="form-group">
+                            <input type="date" 
+                            id="sahadakiKesimBitisTarihi" 
+                            formControlName="sahadakiKesimBitisTarihi" class="form-control" 
+                            placeholder="Sahadaki Kesim Bitiş Tarihi"/>
+                        </div>
+                    </div>
+                    <div  class="mb-3">
+                        <label for="unitPrice">Maden Ayrıştırma Süresi</label>
+                        <div class="form-group">
+                            <input type="number" 
+                            id="madenAyristirmaSuresi" 
+                            formControlName="madenAyristirmaSuresi" class="form-control" 
+                            placeholder="Maden Ayrıştırma Süresi"/>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="categoryId">Maden Ayrıştırma Başlangıç Tarihi</label>
+                        <div class="form-group">
+                            <input type="date" 
+                            id="madenAyristirmaBaslangicTarihi" 
+                            formControlName="madenAyristirmaBaslangicTarihi" class="form-control" 
+                            placeholder="Maden Ayrıştırma Başlangıç Tarihi"/>
+                        </div>
+                    </div>
+                   <div class="mb-3">
+                    <label for="unitsInStock">Maden Ayrıştırma Başlangıç Tarihi</label>
+                    <div class="form-group">
+                        <input type="date" 
+                        id="madenAyristirmaBitisTarihi" 
+                        formControlName="madenAyristirmaBitisTarihi" class="form-control" 
+                        placeholder="Maden Ayrıştırma Başlangıç Tarihi"/>
+                    </div>
+                   </div>
+                    <div  class="mb-3">
+                        <label for="unitPrice">İçerik Yüzdeleri</label>
+                        <div class="form-group">
+                            <input type="number" 
+                            id="icerikYuzdeleri" 
+                            formControlName="icerikYuzdeleri" class="form-control" 
+                            placeholder="İçerik Yüzdeleri"/>
+                        </div>
+                    </div>
+                    <div  class="mb-3">
+                        <label for="unitPrice">Maden Ayrıştırmacı</label>
+                        <div class="form-group">
+                            <input type="number" 
+                            id="madenAyristirmaciID" 
+                            formControlName="madenAyristirmaciID" class="form-control" 
+                            placeholder="Maden Ayrıştırmacı"/>
+                        </div>
+                    </div>
+                    <div  class="mb-3">
+                        <label for="unitPrice">Gemideki Kesimci</label>
+                        <div class="form-group">
+                            <input type="number" 
+                            id="gemidekiKesimciID" 
+                            formControlName="gemidekiKesimciID" class="form-control" 
+                            placeholder="Gemideki Kesimci"/>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-fill btn-primary" (click)="add()" >Ekle</button>
+            </div>
+        </div>
+        
+    </div>
+    
+</div>
