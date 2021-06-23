@@ -21,6 +21,7 @@ import { KazanAddComponent } from './components/kazan-add/kazan-add.component';
 import { HazMatAddComponent } from './components/haz-mat-add/haz-mat-add.component';
 import { LoginComponent } from './components/login/login.component';
 import { KazanDoldurmaAddComponent } from './components/kazan-doldurma-add/kazan-doldurma-add.component';
+import { BayrakUpdateComponent } from './components/bayrak-update/bayrak-update.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { KazanDoldurmaAddComponent } from './components/kazan-doldurma-add/kazan
     HazMatAddComponent,
     LoginComponent,
     KazanDoldurmaAddComponent,
+    BayrakUpdateComponent,
    
   ],
   imports: [
