@@ -22,4 +22,8 @@ export class BayrakService {
     return this.httpClient.post<ResponseModel>(this.apiUrl+"bayrak/add",bayrak)
   }
 
+  update(bayrak:Bayrak):Observable<ResponseModel>{
+    return this.httpClient.patch<ResponseModel>(this.apiUrl+"bayrak/update",bayrak)
+  }
+
 }

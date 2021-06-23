@@ -22,6 +22,7 @@ import { HazMatAddComponent } from './components/haz-mat-add/haz-mat-add.compone
 import { LoginComponent } from './components/login/login.component';
 import { KazanDoldurmaAddComponent } from './components/kazan-doldurma-add/kazan-doldurma-add.component';
 import { BayrakUpdateComponent } from './components/bayrak-update/bayrak-update.component';
+import { GemiUpdateComponent } from './components/gemi-update/gemi-update.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { BayrakUpdateComponent } from './components/bayrak-update/bayrak-update.
     LoginComponent,
     KazanDoldurmaAddComponent,
     BayrakUpdateComponent,
+    GemiUpdateComponent,
    
   ],
   imports: [

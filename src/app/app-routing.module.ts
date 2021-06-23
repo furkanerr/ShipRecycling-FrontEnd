@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BayrakAddComponent } from './components/bayrak-add/bayrak-add.component';
+import { BayrakUpdateComponent } from './components/bayrak-update/bayrak-update.component';
 import { BlokListComponent } from './components/blok-list/blok-list.component';
 import { GemiAddComponent } from './components/gemi-add/gemi-add.component';
 import { GemiListComponent } from './components/gemi-list/gemi-list.component';
 import { GemiTipiAddComponent } from './components/gemi-tipi-add/gemi-tipi-add.component';
+import { GemiUpdateComponent } from './components/gemi-update/gemi-update.component';
 import { HazMatAddComponent } from './components/haz-mat-add/haz-mat-add.component';
 import { KazanAddComponent } from './components/kazan-add/kazan-add.component';
 import { KazanDoldurmaAddComponent } from './components/kazan-doldurma-add/kazan-doldurma-add.component';
@@ -22,7 +24,8 @@ const routes: Routes = [
   {path:"hazmat/add", component:HazMatAddComponent},
   {path:"blok/add", component:BlokListComponent},
   {path:"kazandoldurmaoperasyonlari/add", component:KazanDoldurmaAddComponent},
-  {path:"login", component:LoginComponent}
+  {path:"login", component:LoginComponent},
+  {path:"bayrak/update/:gemiId", component:GemiUpdateComponent}
 
 
 ];

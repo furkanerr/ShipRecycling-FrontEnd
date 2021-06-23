@@ -25,6 +25,11 @@ export class GemiService {
     let newPath = this.apiUrl + "gemi/getall"
     return this.httpClient.get<ListResponseModel<Gemiler>>(newPath);
   }
+  getGemiDetailsById(gemiId:number):Observable<ListResponseModel<Gemiler>> {
+    let newPath = this.apiUrl + "gemi/getbyid?gemiId="+gemiId
+    return this.httpClient.get<ListResponseModel<Gemiler>>(newPath);
+  }
+
   getGemiDetails():Observable<ListResponseModel<GemilerDto>> {
     let newPath = this.apiUrl + "gemi/getalldetailsofgemi"
     return this.httpClient.get<ListResponseModel<GemilerDto>>(newPath);
