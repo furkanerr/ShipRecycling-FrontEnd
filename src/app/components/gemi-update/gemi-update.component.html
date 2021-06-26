@@ -3,18 +3,19 @@
         <div class="card">
             <div class="card-header"><h5 class="title">Gemi Kaydı Güncelle</h5></div>
             <div class="card-body">
-                <form [formGroup]="gemiUpdateForm">
+                <form [formGroup]="gemiUpdateForm" >
                     <div class="mb-3">
                         <label for="productName">Bayrak</label>
-                        <select  class="form-control">
-                            <option *ngFor="let bayrak of bayraklar">{{bayrak.ulkeAdi}}</option>
+                        <select id="bayrakID"    formControlName="bayrakID" class="form-control">
+                            <option  *ngFor="let bayrak of bayraklar" [value]="bayrak.id">{{bayrak.ulkeAdi}}</option>
+                            
                           </select>
                     </div>
                    
                     <div class="mb-3">
-                        <label for="categoryId">Gemi Tipi</label>
-                        <div class="form-group"  >
-                            <input type="text" 
+                        <label for="gemiTipiID">Gemi Tipi</label>
+                        <div class="form-group" >
+                            <input type="number" 
                             id="gemiTipiID" 
                             formControlName="gemiTipiID" class="form-control" 
                            placeholder= "Gemi Tipi"

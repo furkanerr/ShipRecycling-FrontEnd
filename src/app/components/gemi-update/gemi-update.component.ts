@@ -39,6 +39,7 @@ export class GemiUpdateComponent implements OnInit {
 
   createGemiUpdateForm() {
     this.gemiUpdateForm = this.formBuilder.group({
+      id:[],
       gemiTipiID: ['', Validators.required],
       bayrakID: ['', Validators.required],
       tonnage: ['', Validators.required],
@@ -50,7 +51,11 @@ export class GemiUpdateComponent implements OnInit {
   update() {
     if (this.gemiUpdateForm.valid) {
       let gemiModel = Object.assign({}, this.gemiUpdateForm.value);
-      this.gemiService.add(gemiModel).subscribe(
+     gemiModel.bayrakID=parseInt(gemiModel.bayrakID);
+     
+      console.log(gemiModel);
+      console.log(typeof(gemiModel.bayrakID));
+      this.gemiService.update(gemiModel).subscribe(
         (response) => {
           this.toastrService.success(response.message, 'Başarılı');
           console.log(response);
@@ -73,7 +78,8 @@ export class GemiUpdateComponent implements OnInit {
   }
     getGemiById(gemiId:number){
       this.gemiService.getGemiDetailsById(gemiId).subscribe((response) =>{
-        this.gemiler=response.data;
+        this.gemiUpdateForm.setValue(response.data);
+       
        
       })
 
@@ -82,6 +88,8 @@ export class GemiUpdateComponent implements OnInit {
   getBayraklar() {
     this.bayrakService.getBayrak().subscribe((response) => {
       this.bayraklar = response.data;
+      
+     
     });
   }
 }

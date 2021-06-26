@@ -21,6 +21,15 @@ export class GemiService {
   add(gemi:Gemiler):Observable<ResponseModel>{
     return this.httpClient.post<ResponseModel>(this.apiUrl+"gemi/add",gemi)
   }
+
+  update(gemi:Gemiler):Observable<ResponseModel>{
+    let id =gemi.id
+    
+    return this.httpClient.put<ResponseModel>(this.apiUrl+"gemi/update",gemi)
+  }
+  
+
+
   getGemi():Observable<ListResponseModel<Gemiler>> {
     let newPath = this.apiUrl + "gemi/getall"
     return this.httpClient.get<ListResponseModel<Gemiler>>(newPath);

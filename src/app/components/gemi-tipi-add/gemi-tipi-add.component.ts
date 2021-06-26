@@ -26,10 +26,10 @@ export class GemiTipiAddComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
-     this.createGemiAddForm();
+     this.createGemiTipiAddForm();
   }
 
- createGemiAddForm() {
+ createGemiTipiAddForm() {
      this.gemiTipiAddForm = this.formBuilder.group({
        gemiTipi: ['', Validators.required]
       

@@ -6,6 +6,7 @@ import { BlokListComponent } from './components/blok-list/blok-list.component';
 import { GemiAddComponent } from './components/gemi-add/gemi-add.component';
 import { GemiListComponent } from './components/gemi-list/gemi-list.component';
 import { GemiTipiAddComponent } from './components/gemi-tipi-add/gemi-tipi-add.component';
+import { GemiTipiUpdateComponent } from './components/gemi-tipi-update/gemi-tipi-update.component';
 import { GemiUpdateComponent } from './components/gemi-update/gemi-update.component';
 import { HazMatAddComponent } from './components/haz-mat-add/haz-mat-add.component';
 import { KazanAddComponent } from './components/kazan-add/kazan-add.component';
@@ -25,7 +26,8 @@ const routes: Routes = [
   {path:"blok/add", component:BlokListComponent},
   {path:"kazandoldurmaoperasyonlari/add", component:KazanDoldurmaAddComponent},
   {path:"login", component:LoginComponent},
-  {path:"bayrak/update/:gemiId", component:GemiUpdateComponent}
+  {path:"bayrak/update/:gemiId", component:GemiUpdateComponent},
+  {path:"gemitipleri/update/:gemiTipiId", component:GemiTipiUpdateComponent}
 
 
 ];

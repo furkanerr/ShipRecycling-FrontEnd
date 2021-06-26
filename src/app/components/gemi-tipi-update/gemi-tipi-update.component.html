@@ -1,0 +1,14 @@
+<form [formGroup]="gemiTipiUpdateForm">
+    <div class="mb-3">
+      <label for="gemiTipiId">Gemi Tipi</label>
+      <div class="form-group">
+          <input type="text" 
+          id="gemiTipi" 
+          formControlName="gemiTipi" class="form-control" 
+          placeholder="Gemi Tipi"/>
+      </div>
+  </div>
+  </form>
+  <div class="card-footer">
+    <button class="btn btn-fill btn-primary"(click)="update()" >Ekle</button>
+</div>
