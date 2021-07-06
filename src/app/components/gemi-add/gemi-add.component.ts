@@ -19,6 +19,8 @@ export class GemiAddComponent implements OnInit {
 
  
   gemiAddForm! : FormGroup;
+
+  imageAddForm!:FormGroup;
   
   constructor(
     
@@ -46,7 +48,17 @@ export class GemiAddComponent implements OnInit {
     });
   }
 
+  createImageAddForm(){
+    this.imageAddForm= this.formBuilder.group({
+
+      
+
+    });
+
+  }
+
   add(){
+    
     if(this.gemiAddForm.valid){
       let gemiModel = Object.assign({},this.gemiAddForm.value)
       this.gemiService.add(gemiModel).subscribe(response=>{
