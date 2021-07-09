@@ -1,0 +1,21 @@
+<form [formGroup]="imageAddForm">
+  <div class="mb-3">
+    <label for="gemi">Gemi</label>
+    <select class="form-control" formControlName="GemiId">
+      <option *ngFor="let gemi of gemiler">{{ gemi.id }}</option>
+    </select>
+  </div>
+  <div class="mb-3">
+    <label for="imageFile">Resim Seçin</label>
+    <div class="form-group">
+      <input
+        type="file"
+        (change)="onFileChanged($event)"
+        class="form-control"
+      />
+    </div>
+  </div>
+</form>
+<div class="card-footer">
+    <button class="btn btn-fill btn-primary" (click)="imageAdd()">Ekle</button>
+</div>

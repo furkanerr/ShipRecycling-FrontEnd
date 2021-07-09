@@ -19,8 +19,7 @@ export class GemiAddComponent implements OnInit {
 
  
   gemiAddForm! : FormGroup;
-
-  imageAddForm!:FormGroup;
+  
   
   constructor(
     
@@ -48,14 +47,7 @@ export class GemiAddComponent implements OnInit {
     });
   }
 
-  createImageAddForm(){
-    this.imageAddForm= this.formBuilder.group({
 
-      
-
-    });
-
-  }
 
   add(){
     

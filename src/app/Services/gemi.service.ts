@@ -5,6 +5,7 @@ import { ListResponseModel } from '../models/listResponseModel';
 import { Gemiler } from '../models/gemiler';
 import { ResponseModel } from '../models/responseModel';
 import { GemilerDto } from '../models/DTOs/gemilerDto';
+import { Resimler } from '../models/resimler';
 
 @Injectable({
   providedIn: 'root'
@@ -43,4 +44,7 @@ export class GemiService {
     let newPath = this.apiUrl + "gemi/getalldetailsofgemi"
     return this.httpClient.get<ListResponseModel<GemilerDto>>(newPath);
   }
+
+ 
+
 }

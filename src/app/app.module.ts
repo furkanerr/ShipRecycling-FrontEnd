@@ -24,6 +24,7 @@ import { KazanDoldurmaAddComponent } from './components/kazan-doldurma-add/kazan
 import { BayrakUpdateComponent } from './components/bayrak-update/bayrak-update.component';
 import { GemiUpdateComponent } from './components/gemi-update/gemi-update.component';
 import { GemiTipiUpdateComponent } from './components/gemi-tipi-update/gemi-tipi-update.component';
+import { GemiImageAddComponent } from './components/gemi-image-add/gemi-image-add.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { GemiTipiUpdateComponent } from './components/gemi-tipi-update/gemi-tipi
     BayrakUpdateComponent,
     GemiUpdateComponent,
     GemiTipiUpdateComponent,
+    GemiImageAddComponent,
    
   ],
   imports: [
