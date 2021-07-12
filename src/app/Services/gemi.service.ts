@@ -6,6 +6,7 @@ import { Gemiler } from '../models/gemiler';
 import { ResponseModel } from '../models/responseModel';
 import { GemilerDto } from '../models/DTOs/gemilerDto';
 import { Resimler } from '../models/resimler';
+import { SingleResponseModel } from '../models/singleResponseModel';
 
 @Injectable({
   providedIn: 'root'
@@ -35,9 +36,9 @@ export class GemiService {
     let newPath = this.apiUrl + "gemi/getall"
     return this.httpClient.get<ListResponseModel<Gemiler>>(newPath);
   }
-  getGemiDetailsById(gemiId:number):Observable<ListResponseModel<Gemiler>> {
+  getGemiDetailsById(gemiId:number):Observable<SingleResponseModel<Gemiler>> {
     let newPath = this.apiUrl + "gemi/getbyid?gemiId="+gemiId
-    return this.httpClient.get<ListResponseModel<Gemiler>>(newPath);
+    return this.httpClient.get<SingleResponseModel<Gemiler>>(newPath);
   }
 
   getGemiDetails():Observable<ListResponseModel<GemilerDto>> {
