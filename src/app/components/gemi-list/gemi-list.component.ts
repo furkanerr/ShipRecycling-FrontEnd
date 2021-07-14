@@ -31,6 +31,7 @@ export class GemiListComponent implements OnInit {
 gemiDelete(id:number){
   this.gemiService.delete(id).subscribe(response=>{
     
+    location.reload();
   })
 }
 

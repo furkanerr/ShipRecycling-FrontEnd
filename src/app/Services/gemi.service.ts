@@ -31,8 +31,8 @@ export class GemiService {
   }
   
   delete(id:number){
-    return this.httpClient.delete(this.apiUrl+"gemi/delete/"+id)
-    
+    return this.httpClient.delete(this.apiUrl+"gemi/delete?id="+id)
+
   }
   
 
