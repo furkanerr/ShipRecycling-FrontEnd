@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 import { ListResponseModel } from '../models/listResponseModel';
 import { Resimler } from '../models/resimler';
 import { ResponseModel } from '../models/responseModel';
+import { SingleResponseModel } from '../models/singleResponseModel';
 
 @Injectable({
   providedIn: 'root'
@@ -22,8 +23,8 @@ export class GemiImageService {
     return this.httpClient.post<ResponseModel>( this.apiUrl+"resim/add",uploadData)
   }
 
-  getGemiImageByGemiId(gemiId:number):Observable<ListResponseModel<Resimler>>{
+  getGemiImageByGemiId(gemiId:number):Observable<SingleResponseModel<Resimler>>{
     let newPath = this.apiUrl + "resim/getbyid?gemiId="+gemiId
-    return this.httpClient.get<ListResponseModel<Resimler>>(newPath);
+    return this.httpClient.get<SingleResponseModel<Resimler>>(newPath);
   }
 }

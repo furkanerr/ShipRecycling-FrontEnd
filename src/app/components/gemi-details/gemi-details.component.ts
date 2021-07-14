@@ -14,11 +14,12 @@ export class GemiDetailsComponent implements OnInit {
 
   gemiler:Gemiler={id:-1,gemiTipiID:-1,bayrakID:-1,tonnage:-1,imoNo:-1,gemiSahibiSirket:""};
   gemiId!:number;
-  gemiImages:Resimler[]=[];
+  gemiImages:Resimler={id:-1,resimAdresi:"",GemiId:-1};
 
 
 
-  apiUrl = 'https://localhost:44335/api/';
+  apiUrl = 'https://localhost:44335';
+
 
   constructor(private gemiService:GemiService,
     private gemiImagesService:GemiImageService,
@@ -28,7 +29,9 @@ export class GemiDetailsComponent implements OnInit {
   ngOnInit(): void {
     this.gemiId= this.activatedRoute.snapshot.params["gemiId"];
     this.getGemiler(this.gemiId);
+   
     this.getGemiImagesByGemiId(this.gemiId);
+    
   }
 
 
@@ -39,10 +42,12 @@ export class GemiDetailsComponent implements OnInit {
     })   
   }
 getGemiImagesByGemiId(gemiId:number){
+ 
   this.gemiImagesService.getGemiImageByGemiId(gemiId).subscribe(response=>{
-    
+     console.log(response.data);
     this.gemiImages=response.data;
-   
+    console.log(this.gemiImages.resimAdresi)
+ 
   })
 }
 }

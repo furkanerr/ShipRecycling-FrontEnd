@@ -1,7 +1,7 @@
 <div  class="card" style="width: 18rem;">
-    <div *ngFor="let images of gemiImages" >
-    <img src="{{apiUrl}}/{{images.resimAdresi}}" class="card-img-top" alt="...">
-    {{images.id}}
+    <div  >
+    <img src="{{apiUrl+gemiImages.resimAdresi}}" class="card-img-top" alt="...">
+    
 </div>
     <div class="card-body">
         <h5 class="card-title">{{gemiler.gemiSahibiSirket}}</h5>
