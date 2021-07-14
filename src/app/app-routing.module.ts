@@ -28,9 +28,9 @@ const routes: Routes = [
   {path:"blok/add", component:BlokListComponent},
   {path:"kazandoldurmaoperasyonlari/add", component:KazanDoldurmaAddComponent},
   {path:"login", component:LoginComponent},
-  {path:"bayrak/update/:gemiId", component:GemiUpdateComponent},
+  {path:"gemi/update/:gemiId", component:GemiUpdateComponent},
   {path:"gemitipleri/update/:gemiTipiId", component:GemiTipiUpdateComponent},
-  {path:"bayrak/detay/:gemiId", component:GemiDetailsComponent},
+  {path:"gemi/detay/:gemiId", component:GemiDetailsComponent},
   {path:"gemiimage/add", component:GemiImageAddComponent}
 
 

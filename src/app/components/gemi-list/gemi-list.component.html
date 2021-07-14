@@ -19,9 +19,9 @@
         <td>{{gemi.tonnage}}</td>
         <td>{{gemi.imoNo}}</td>
         <td>{{gemi.gemiSahibiSirket}}</td>
-        <td><a href="#" routerLink="/bayrak/update/{{gemi.id}}" class="btn btn-success">Güncelle</a></td>
-        <td><a class="btn btn-danger">Sil</a></td>
-        <td><a routerLink="/bayrak/detay/{{gemi.id}}" class="btn btn-primary">Detay</a></td>
+        <td><a href="#" routerLink="/gemi/update/{{gemi.id}}" class="btn btn-success">Güncelle</a></td>
+        <td><a (click)="gemiDelete(gemi)" class="btn btn-danger">Sil</a></td>
+        <td><a routerLink="/gemi/detay/{{gemi.id}}" class="btn btn-primary">Detay</a></td>
         
       </tr>
     </tbody>

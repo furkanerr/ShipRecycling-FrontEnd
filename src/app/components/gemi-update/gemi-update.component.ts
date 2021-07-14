@@ -53,8 +53,7 @@ export class GemiUpdateComponent implements OnInit {
       let gemiModel = Object.assign({}, this.gemiUpdateForm.value);
      gemiModel.bayrakID=parseInt(gemiModel.bayrakID);
      
-      console.log(gemiModel);
-      console.log(typeof(gemiModel.bayrakID));
+     
       this.gemiService.update(gemiModel).subscribe(
         (response) => {
           this.toastrService.success(response.message, 'Başarılı');

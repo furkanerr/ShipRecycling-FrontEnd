@@ -18,16 +18,21 @@ export class GemiService {
 
   constructor(private httpClient: HttpClient) { }
 
-  
+   
 
   add(gemi:Gemiler):Observable<ResponseModel>{
     return this.httpClient.post<ResponseModel>(this.apiUrl+"gemi/add",gemi)
   }
 
   update(gemi:Gemiler):Observable<ResponseModel>{
-    let id =gemi.id
+   
     
     return this.httpClient.put<ResponseModel>(this.apiUrl+"gemi/update",gemi)
+  }
+  
+  delete(id:number){
+    return this.httpClient.delete(this.apiUrl+"gemi/delete/"+id)
+    
   }
   
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import { GemilerDto } from 'src/app/models/DTOs/gemilerDto';
 import { Gemiler } from 'src/app/models/gemiler';
 import { GemiService } from 'src/app/Services/gemi.service';
@@ -27,7 +28,11 @@ export class GemiListComponent implements OnInit {
     })   
   }
 
-
+gemiDelete(id:number){
+  this.gemiService.delete(id).subscribe(response=>{
+    
+  })
+}
 
 
 }
