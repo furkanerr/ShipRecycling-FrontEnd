@@ -44,7 +44,7 @@ export class GemiDetailsComponent implements OnInit {
 getGemiImagesByGemiId(gemiId:number){
  
   this.gemiImagesService.getGemiImageByGemiId(gemiId).subscribe(response=>{
-     console.log(response.data);
+    
     this.gemiImages=response.data;
     console.log(this.gemiImages.resimAdresi)
  
