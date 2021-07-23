@@ -3,14 +3,18 @@
     <img src="{{apiUrl+gemiImages.resimAdresi}}" class="card-img-top" alt="...">
     
 </div>
-    <div class="card-body">
+    <div class="card-body" *ngFor="let gemi of gemiler">
       <label > Gemi Sahibi Şirket:</label>
         <h6 class="card-title">
-         {{gemiler.gemiSahibiSirket}}</h6>
-         <label>IMO No:</label>
-        <p class="card-text"> {{gemiler.imoNo}}</p>
+         {{gemi.gemiSahibiSirket}}</h6>
+         <label>Gemi Tipi:</label>
+         <p class="card-text"> {{gemi.gemiTipiName}}</p>
+        <label>Bayrak:</label>
+        <p class="card-text"> {{gemi.bayrakName}}</p>
+        <label>IMO No:</label>
+        <p class="card-text"> {{gemi.imoNo}}</p>
         <label>Tonnage:</label>
-        <p class="card-text"> {{gemiler.tonnage}}</p>
+        <p class="card-text"> {{gemi.tonnage}}</p>
      
      
     </div>
