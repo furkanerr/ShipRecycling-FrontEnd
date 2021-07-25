@@ -27,6 +27,7 @@ import { GemiTipiUpdateComponent } from './components/gemi-tipi-update/gemi-tipi
 import { GemiImageAddComponent } from './components/gemi-image-add/gemi-image-add.component';
 import { GemiDetailsComponent } from './components/gemi-details/gemi-details.component';
 import { GemiDeleteComponent } from './components/gemi-delete/gemi-delete.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { GemiDeleteComponent } from './components/gemi-delete/gemi-delete.compon
     GemiImageAddComponent,
     GemiDetailsComponent,
     GemiDeleteComponent,
+    SignUpComponent,
    
   ],
   imports: [

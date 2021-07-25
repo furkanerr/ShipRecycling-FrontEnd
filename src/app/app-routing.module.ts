@@ -15,6 +15,7 @@ import { KazanAddComponent } from './components/kazan-add/kazan-add.component';
 import { KazanDoldurmaAddComponent } from './components/kazan-doldurma-add/kazan-doldurma-add.component';
 import { LoginComponent } from './components/login/login.component';
 import { MeslekAddComponent } from './components/meslek-add/meslek-add.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
 
 const routes: Routes = [
   {path:"",pathMatch:"full", component:GemiListComponent},
@@ -31,6 +32,7 @@ const routes: Routes = [
   {path:"gemi/update/:gemiId", component:GemiUpdateComponent},
   {path:"gemitipleri/update/:gemiTipiId", component:GemiTipiUpdateComponent},
   {path:"gemi/detay/:gemiId", component:GemiDetailsComponent},
+  {path:"signup", component:SignUpComponent},
   {path:"gemiimage/add", component:GemiImageAddComponent}
 
 

@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { LoginModel } from '../models/loginModel';
+import { SignUpModel } from '../models/signUpModel';
 import { SingleResponseModel } from '../models/singleResponseModel';
 import { TokenModel } from '../models/tokenModel';
 
@@ -15,6 +16,10 @@ export class AuthService {
 
   login(loginModel:LoginModel){
     return this.httpClient.post<SingleResponseModel<TokenModel>>(this.apiUrl+"login",loginModel)
+  }
+
+  signUp(signUpModel:SignUpModel){
+    return this.httpClient.post<SingleResponseModel<TokenModel>>(this.apiUrl+"register",signUpModel);
   }
 
   isAuthenticated(){
