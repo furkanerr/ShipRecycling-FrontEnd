@@ -28,6 +28,7 @@ import { GemiImageAddComponent } from './components/gemi-image-add/gemi-image-ad
 import { GemiDetailsComponent } from './components/gemi-details/gemi-details.component';
 import { GemiDeleteComponent } from './components/gemi-delete/gemi-delete.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { AuthInterceptor } from './interceptors/auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -64,7 +65,9 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
       positionClass:"toast-bottom-right"
     })
   ],
-  providers: [],
+  providers: [
+    {provide:HTTP_INTERCEPTORS,useClass:AuthInterceptor,multi:true}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

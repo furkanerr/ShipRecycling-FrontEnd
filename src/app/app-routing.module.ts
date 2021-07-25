@@ -16,24 +16,25 @@ import { KazanDoldurmaAddComponent } from './components/kazan-doldurma-add/kazan
 import { LoginComponent } from './components/login/login.component';
 import { MeslekAddComponent } from './components/meslek-add/meslek-add.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { LoginGuard } from './guards/login.guard';
 
 const routes: Routes = [
   {path:"",pathMatch:"full", component:GemiListComponent},
   {path:"gemi", component:GemiListComponent},
-  {path:"gemi/add", component:GemiAddComponent},
-  {path:"bayrak/add", component:BayrakAddComponent},
-  {path:"gemiTipi/add", component:GemiTipiAddComponent},
-  {path:"meslek/add", component:MeslekAddComponent},
-  {path:"kazanlar/add", component:KazanAddComponent},
-  {path:"hazmat/add", component:HazMatAddComponent},
-  {path:"blok/add", component:BlokListComponent},
-  {path:"kazandoldurmaoperasyonlari/add", component:KazanDoldurmaAddComponent},
+  {path:"gemi/add", component:GemiAddComponent,canActivate:[LoginGuard]},
+  {path:"bayrak/add", component:BayrakAddComponent,canActivate:[LoginGuard]},
+  {path:"gemiTipi/add", component:GemiTipiAddComponent,canActivate:[LoginGuard]},
+  {path:"meslek/add", component:MeslekAddComponent,canActivate:[LoginGuard]},
+  {path:"kazanlar/add", component:KazanAddComponent,canActivate:[LoginGuard]},
+  {path:"hazmat/add", component:HazMatAddComponent,canActivate:[LoginGuard]},
+  {path:"blok/add", component:BlokListComponent,canActivate:[LoginGuard]},
+  {path:"kazandoldurmaoperasyonlari/add", component:KazanDoldurmaAddComponent,canActivate:[LoginGuard]},
   {path:"login", component:LoginComponent},
-  {path:"gemi/update/:gemiId", component:GemiUpdateComponent},
-  {path:"gemitipleri/update/:gemiTipiId", component:GemiTipiUpdateComponent},
+  {path:"gemi/update/:gemiId", component:GemiUpdateComponent,canActivate:[LoginGuard]},
+  {path:"gemitipleri/update/:gemiTipiId", component:GemiTipiUpdateComponent,canActivate:[LoginGuard]},
   {path:"gemi/detay/:gemiId", component:GemiDetailsComponent},
   {path:"signup", component:SignUpComponent},
-  {path:"gemiimage/add", component:GemiImageAddComponent}
+  {path:"gemiimage/add", component:GemiImageAddComponent,canActivate:[LoginGuard]}
 
 
 ];
