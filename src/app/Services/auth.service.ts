@@ -11,7 +11,7 @@ import { TokenModel } from '../models/tokenModel';
 export class AuthService {
 
 
-  apiUrl = 'https://localhost:44314/api/auth/';
+  apiUrl = 'https://localhost:44335/api/auth/';
   constructor(private httpClient:HttpClient) { }
 
   login(loginModel:LoginModel){
@@ -19,7 +19,7 @@ export class AuthService {
   }
 
   signUp(signUpModel:SignUpModel){
-    return this.httpClient.post<SingleResponseModel<TokenModel>>(this.apiUrl+"register",signUpModel);
+    return this.httpClient.post<SingleResponseModel<TokenModel>>(this.apiUrl+"register",signUpModel)
   }
 
   isAuthenticated(){

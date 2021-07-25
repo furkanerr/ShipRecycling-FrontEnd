@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { AuthService } from 'src/app/Services/auth.service';
+import { BayrakService } from 'src/app/Services/bayrak.service';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +13,8 @@ export class LoginComponent implements OnInit {
 
   loginForm!:FormGroup;
   constructor(private formBuilder:FormBuilder,
-     private authService:AuthService, private toastrService:ToastrService) { }
+     private authService:AuthService, private toastrService:ToastrService
+     ) { }
 
   ngOnInit(): void {
     this.createLoginForm();
@@ -29,12 +31,14 @@ export class LoginComponent implements OnInit {
     if(this.loginForm.valid){
       console.log(this.loginForm.value);
       let loginModel = Object.assign({},this.loginForm.value)
-
+     
+     
       this.authService.login(loginModel).subscribe(response=>{
+        console.log(response);
         this.toastrService.info(response.message)
         localStorage.setItem("token",response.data.token)
       },responseError=>{
-        //console.log(responseError)
+        
         this.toastrService.error(responseError.error)
       })
     }
