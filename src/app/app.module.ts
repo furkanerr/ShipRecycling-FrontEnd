@@ -29,6 +29,7 @@ import { GemiDetailsComponent } from './components/gemi-details/gemi-details.com
 import { GemiDeleteComponent } from './components/gemi-delete/gemi-delete.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
+import { UserMenuComponent } from './components/user-menu/user-menu.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { AuthInterceptor } from './interceptors/auth.interceptor';
     GemiDetailsComponent,
     GemiDeleteComponent,
     SignUpComponent,
+    UserMenuComponent,
    
   ],
   imports: [

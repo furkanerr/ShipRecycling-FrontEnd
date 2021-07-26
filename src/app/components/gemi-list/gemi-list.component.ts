@@ -18,6 +18,7 @@ export class GemiListComponent implements OnInit {
 
   ngOnInit(): void {
     this.getGemiler();
+    
   }
 
 

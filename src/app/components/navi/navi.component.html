@@ -17,7 +17,9 @@
             <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
           </li>
         </ul>
-        <form class="d-flex">
+      
+        <app-user-menu *ngIf="isAuthenticated"></app-user-menu>
+        <form class="d-flex" *ngIf="!isAuthenticated">
          
           <button  routerLink="/login" class="btn btn-outline-success m-2" type="submit">LOGİN</button>
           

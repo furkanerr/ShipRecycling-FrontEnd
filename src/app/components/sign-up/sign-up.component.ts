@@ -36,6 +36,8 @@ signUp(){
       this.toastrService.info(response.message)
       console.log(response);
       localStorage.setItem("token",response.data.token)
+      window.location.assign('http://localhost:4200/gemi');
+
     },responseError=>{
       console.log(responseError);
       this.toastrService.error(responseError.message)
