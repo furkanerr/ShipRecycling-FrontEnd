@@ -5,7 +5,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
  ### Proje SOLID, Kurumsal Yazılım Mimari, Yazılım Geliştirme Prensiplerine uygun geliştirildi.
  
-#Gemi söküm ve geri dönüşüm projesinin frontend kısmıdır.
+# Gemi söküm ve geri dönüşüm projesinin frontend kısmıdır.
 
 Projede login olan yetkili kişi ilgili butona tıklayarak eklmek istediği bilginin form sayfasına ulaşır ve bilgieri eksiksiz girdikten sonra ekler. 
 Ayrıca güncelleme ve silme işlemlerini de yapabilir. Eklenen bilgiler bir tabloda ilgili sayfada görüntülenir.
